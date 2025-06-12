@@ -18,6 +18,7 @@
 
 <body>
   <header class="header">
+    <img class="header-bg" src="./images/header-bg.png" alt="" loading="lazy">
     <div class="container">
       <h1 class="header__title">Grumbly</h1>
       <div class="header__inner">
@@ -69,7 +70,7 @@
   </header>
 
   <main class="main">
-     <section class="about" id="about">
+    <section class="about" id="about">
       <div class="container">
         <h2 class="about__title title">
           <span>Т</span>вой мир - твои правила
@@ -581,7 +582,7 @@
           </p>
         </div>
       </div>
-    </footer> 
+    </footer>
 
 
 
@@ -603,7 +604,12 @@
 
   </main>
 
-
+  <script>
+    window.addEventListener('load', () => {
+      document.querySelector('.main').style.opacity = '1';
+    });
+  </script>
+  
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
