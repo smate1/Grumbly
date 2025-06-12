@@ -1297,7 +1297,7 @@ body {
 	.benefits__item-title {
 		margin-bottom: 15px;
 	}
-	.reviews{
+	.reviews {
 		padding-top: 0;
 	}
 	.how__title {
@@ -1469,7 +1469,7 @@ body {
 		gap: 30px;
 	}
 
-	.how__img{
+	.how__img {
 		padding-top: 5px;
 	}
 
@@ -1504,16 +1504,15 @@ body {
 		font-size: 40px;
 		padding: 20px 60px;
 	}
-}
-
-/* Tablet */
-@media (max-width: 768px) {
 	.header__title {
 		font-size: 80px;
 		letter-spacing: 20px;
 		padding-top: 40px;
 	}
+}
 
+/* Tablet */
+@media (max-width: 768px) {
 	.header__inner {
 		padding-top: 60px;
 		gap: 30px;
@@ -1639,10 +1638,6 @@ body {
 	.benefits__list-item::before {
 		width: 15px;
 		height: 15px;
-	}
-
-	.join {
-		padding-bottom: 150px;
 	}
 
 	.join__text {
@@ -1875,10 +1870,6 @@ body {
 		top: 20%;
 	}
 
-	.join {
-		padding-bottom: 80px;
-	}
-
 	.join__text {
 		font-size: 16px;
 	}
@@ -2008,12 +1999,19 @@ body {
 
 /* Enhanced tablet and mobile responsive */
 @media (max-width: 1024px) {
-	.join__texts{
+	.join {
+		padding-bottom: 80px;
+	}
+	.footer__column-title,
+	.footer__links li{
+		text-align: center;
+	}
+	.join__texts {
 		margin-bottom: 50px;
 	}
 	.join__text + .join__text {
-    margin-top: 15px;
-}
+		margin-top: 15px;
+	}
 	.benefits {
 		padding-bottom: 70px;
 	}
