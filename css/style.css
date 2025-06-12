@@ -1294,14 +1294,17 @@ body {
 
 /* Large Tablet */
 @media (max-width: 1024px) {
+	.how__title{
+		margin-bottom: 0;
+	}
+	.how__decor-img{
+		display: none;
+	}
 	.benefits__item-title {
 		margin-bottom: 15px;
 	}
 	.reviews {
 		padding-top: 0;
-	}
-	.how__title {
-		margin-bottom: 30px;
 	}
 
 	.about__item-img,
