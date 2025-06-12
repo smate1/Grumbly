@@ -94,22 +94,14 @@ body {
 }
 
 .header {
-	/* background-image: url('../images/header-bg.png');
+	background-image: url('../images/header-bg.png');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: top center; */
+	background-position: top center;
 	min-height: 100vh;
 	position: relative;
 }
-.header-bg{
-	position: absolute;
-	top: 0;right: 0;
-	left: 0;
-	z-index: -1;
-	width: 100%;
-	object-fit: cover;
-	min-height: 100vh;
-}
+
 .header__title {
 	color: #eaff56;
 	font-family: 'Open Sans';
@@ -1854,29 +1846,7 @@ body {
 	.reviews__text {
 		font-size: 14px;
 	}
-
-	.benefits__arrow {
-		width: 300px;
-		height: auto;
-	}
-
-	.benefits__block {
-		width: 240px;
-		padding: 25px 15px;
-		border-radius: 40px;
-		border-width: 6px;
-	}
-
-	.benefits__list-item {
-		font-size: 14px;
-		padding-left: 25px;
-	}
-
-	.benefits__list-item::before {
-		width: 10px;
-		height: 10px;
-		top: 20%;
-	}
+	
 
 	.join__text {
 		font-size: 16px;
@@ -2007,6 +1977,31 @@ body {
 
 /* Enhanced tablet and mobile responsive */
 @media (max-width: 1024px) {
+	.benefits__list-item + .benefits__list-item {
+    margin-top: 15px;
+}
+	.benefits__arrow {
+		width: 300px;
+		height: auto;
+	}
+
+	.benefits__block {
+		width: 240px;
+		padding: 25px 15px;
+		border-radius: 40px;
+		border-width: 6px;
+	}
+
+	.benefits__list-item {
+		font-size: 10px;
+		padding-left: 20px;
+	}
+
+	.benefits__list-item::before {
+		width: 5px;
+		height: 5px;
+		top: 20%;
+	}
 	.join {
 		padding-bottom: 80px;
 	}
@@ -2038,7 +2033,7 @@ body {
 		margin-bottom: 50px;
 	}
 	.about__img-wrapper::after {
-		transform: translateX(-50%);
+		transform: translate(-50%, -50%);
 		left: 50%;
 	}
 	.header {
@@ -2158,12 +2153,7 @@ body {
 		height: auto;
 	}
 
-	.about__item-img,
-	.how__img,
-	.users__img {
-		max-width: 120px;
-		height: auto;
-	}
+
 
 	.reviews__img {
 		max-width: 50px;
@@ -2172,11 +2162,6 @@ body {
 }
 
 @media (max-width: 480px) {
-	.header__phone-img {
-		max-width: 120px;
-		height: auto;
-	}
-
 	.reviews__img {
 		max-width: 40px;
 		height: auto;
