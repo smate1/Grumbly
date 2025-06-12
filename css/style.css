@@ -542,8 +542,8 @@ body {
 }
 
 .reviews__text {
-	color: #FFF;
-	font-family: "Open Sans";
+	color: #fff;
+	font-family: 'Open Sans';
 	font-size: 25px;
 	font-style: normal;
 	font-weight: 800;
@@ -564,8 +564,8 @@ body {
 .reviews__nav-prev,
 .reviews__nav-next {
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 135%;
+	transform: translateY(-25%);
 	width: 125px;
 	height: 75px;
 	border-radius: 80px;
@@ -583,20 +583,23 @@ body {
 
 /* Відступ від центру, а не краю */
 .reviews__nav-prev {
-	left: 200px; /* зліва від центру */
+	transform: translateX(-150%);
+	left: 50%; /* зліва від центру */
 	background-image: url('../images/prev-arrow.svg');
 }
 
 .reviews__nav-next {
-	right: 200px; /* справа від центру */
+	transform: translateX(150%);
+	right: 50%; /* справа від центру */
 	background-image: url('../images/next-arrow.svg');
 }
 
-
-.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
 	content: none !important;
 }
-.swiper-button-prev:after, .swiper-rtl .swiper-button-prev:after {
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-prev:after {
 	content: none !important;
 }
 
@@ -605,7 +608,7 @@ body {
 	transform-origin: center center !important;
 }
 
-.reviews__img{
+.reviews__img {
 	max-width: 255px;
 	max-height: 255px;
 }
@@ -971,6 +974,21 @@ body {
 
 /* Large Desktop */
 @media (max-width: 2300px) {
+	.reviews__nav-prev {
+		transform: translateX(-120%);
+	}
+
+	.reviews__nav-next {
+		transform: translateX(120%);
+	}
+	.reviews__nav-prev,
+	.reviews__nav-next {
+		width: 95px;
+		height: 35px;
+	}
+	.reviews__item {
+		padding: 30px 40px;
+	}
 	.price .container {
 		max-width: 1225px;
 	}
@@ -1279,6 +1297,22 @@ body {
 		max-width: 120px;
 		height: auto;
 	}
+	.reviews__text {
+		font-size: 16px;
+	}
+	.reviews__author {
+		margin-bottom: 20px;
+	}
+	.reviews__item {
+		gap: 20px;
+	}
+	.reviews__title {
+		margin-bottom: 150px;
+	}
+	.reviews {
+		padding-top: 0;
+		padding-bottom: 250px;
+	}
 }
 @media (max-width: 1600px) {
 	.users__img-wrapper::after {
@@ -1331,6 +1365,10 @@ body {
 
 /* Large Tablet */
 @media (max-width: 1379px) {
+	.reviews__nav-prev,
+	.reviews__nav-next {
+		top: 120%;
+	}
 	.swiper-slide-active .reviews__item {
 		transform: scale(1) !important;
 	}
@@ -1426,7 +1464,7 @@ body {
 		padding-bottom: 200px;
 	}
 	.reviews__item {
-		border-radius: 40px;
+		border-radius: 140px;
 		padding: 20px;
 		gap: 20px;
 		align-items: center;
@@ -1434,10 +1472,6 @@ body {
 
 	.reviews__author {
 		font-size: 20px;
-	}
-
-	.reviews__text {
-		font-size: 16px;
 	}
 
 	.reviews__img-wrapper {
@@ -1451,35 +1485,15 @@ body {
 		border-width: 2px;
 	}
 
-	.reviews__nav-prev {
-		left: 20px;
-	}
-
-	.reviews__nav-next {
-		right: 20px;
-	}
-
 	.reviews__nav-prev::after,
 	.reviews__nav-next::after {
 		width: 12px;
 		height: 12px;
 		border-width: 2px;
 	}
-	.reviews__item {
-		padding: 15px 40px 40px;
-		border-radius: 40px;
-		border-width: 4px;
-		flex-direction: column;
-		text-align: center;
-		gap: 30px;
-	}
 
 	.reviews__author {
 		font-size: 24px;
-	}
-
-	.reviews__text {
-		font-size: 20px;
 	}
 
 	.benefits {
@@ -1894,10 +1908,19 @@ body {
 		letter-spacing: 20px;
 		padding-top: 40px;
 	}
+	.how {
+		padding-bottom: 60px;
+	}
 }
 
 /* Mobile Large */
 @media (max-width: 640px) {
+	.reviews {
+		padding-bottom: 100px;
+	}
+	.reviews__item {
+		border: 5px solid #eaff56;
+	}
 	.header__title {
 		font-size: 60px;
 		letter-spacing: 15px;
@@ -2090,7 +2113,6 @@ body {
 
 	.reviews__item {
 		padding: 30px 20px 30px;
-		border-radius: 30px;
 		gap: 20px;
 	}
 
@@ -2167,6 +2189,16 @@ body {
 }
 
 @media (max-width: 640px) {
+	.reviews__img-wrapper {
+		width: auto;
+	}
+	.reviews__nav-prev,
+	.reviews__nav-next {
+		top: 110%;
+	}
+	.reviews__title {
+		margin-bottom: 30px;
+}
 	.header__phone-img {
 		max-width: 160px;
 		height: auto;
@@ -2176,6 +2208,9 @@ body {
 		max-width: 50px;
 		height: auto;
 	}
+	.reviews__nav-prev, .reviews__nav-next {
+		top: 103%;
+}
 }
 
 @media (max-width: 480px) {
