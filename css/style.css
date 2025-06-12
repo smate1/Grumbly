@@ -333,14 +333,16 @@ body {
 	font-weight: 800;
 	line-height: normal;
 }
+.price__right {
+	padding: 97px 72px;
+	position: relative;
+	box-shadow: 0 0 130px 100px rgba(255, 255, 0, 0.8); /* Жовте світіння */
+}
+
 .price__left {
 	padding: 200px 72px;
 }
 
-.price__right {
-	padding: 97px 72px;
-	position: relative;
-}
 
 .users {
 	padding-bottom: 135px;
@@ -743,10 +745,11 @@ border: 3px solid #EAFF56;
 	color: #EAFF56;
 }
 
+
 /* Footer Styles */
 .footer {
 	background-color: #1a1a1a;
-	padding: 80px 0 40px;
+	padding: 100px 0 50px;
 	color: #fff;
 }
 
@@ -756,33 +759,36 @@ border: 3px solid #EAFF56;
 	margin-bottom: 60px;
 }
 
+.footer-container{
+	max-width: 2400px;
+	margin: 0 auto;
+}
+
 .footer__left {
 	flex: 1;
-	max-width: 400px;
+	max-width: 1000px;
 }
 
 .footer__logo {
-	display: flex;
-	align-items: center;
 	gap: 16px;
 	margin-bottom: 24px;
+	display: inline-flex;
+	align-items: center;
+	gap: 20px;
 }
 
-.footer__logo-icon {
-	width: 48px;
-	height: 48px;
-}
+
 
 .footer__logo-text {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 32px;
+	font-size: 48px;
 	font-weight: 800;
 	color: #EAFF56;
 }
 
 .footer__description {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
+	font-size: 28px;
 	font-weight: 400;
 	line-height: 1.6;
 	color: #B0B0B0;
@@ -795,8 +801,8 @@ border: 3px solid #EAFF56;
 }
 
 .footer__social-link {
-	width: 48px;
-	height: 48px;
+	width: 56px;
+	height: 56px;
 	border: 2px solid #333;
 	border-radius: 8px;
 	display: flex;
@@ -820,10 +826,10 @@ border: 3px solid #EAFF56;
 
 .footer__column-title {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 18px;
+	font-size: 32px;
 	font-weight: 700;
 	color: #fff;
-	margin-bottom: 24px;
+	margin-bottom: 60px;
 }
 
 .footer__links {
@@ -833,12 +839,12 @@ border: 3px solid #EAFF56;
 }
 
 .footer__links li {
-	margin-bottom: 16px;
+	margin-bottom: 30px;
 }
 
 .footer__link {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
+	font-size: 26px;
 	font-weight: 400;
 	color: #B0B0B0;
 	text-decoration: none;
@@ -857,7 +863,7 @@ border: 3px solid #EAFF56;
 
 .footer__copyright {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
+	font-size: 24px;
 	font-weight: 400;
 	color: #B0B0B0;
 	margin: 0;
@@ -913,3 +919,4 @@ border: 3px solid #EAFF56;
 		font-size: 14px;
 	}
 }
+
