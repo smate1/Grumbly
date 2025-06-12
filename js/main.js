@@ -1,45 +1,38 @@
 // Initialize Swiper for reviews slider
 document.addEventListener('DOMContentLoaded', function () {
 	const swiper = new Swiper('.reviews__slider', {
-		slidesPerView: 1.8,
-		spaceBetween: 40,
+		slidesPerView: 1.5, // трохи більше ніж 1
 		centeredSlides: true,
+		spaceBetween: 40,
 		loop: true,
 		navigation: {
 			nextEl: '.reviews__nav-next',
 			prevEl: '.reviews__nav-prev',
-		},
-		on: {
-			init: function () {
-				updateSlideScales(this)
-			},
-			slideChange: function () {
-				updateSlideScales(this)
-			},
 		},
 		breakpoints: {
 			320: {
 				slidesPerView: 1,
 				spaceBetween: 20,
 			},
+			480: {
+				slidesPerView: 1,
+				spaceBetween: 20,
+			},
 			768: {
-				slidesPerView: 1.4,
-				spaceBetween: 30,
+				slidesPerView: 1.2,
+				spaceBetween: 25,
 			},
 			1024: {
-				slidesPerView: 1.8,
+				slidesPerView: 1.5,
 				spaceBetween: 40,
 			},
-			1200: {
-				slidesPerView: 2.2,
-				spaceBetween: 50,
-			},
 			1400: {
-				slidesPerView: 2.6,
-				spaceBetween: 60,
+				slidesPerView: 1.8,
+				spaceBetween: 350,
 			},
 		},
 	})
+	
 
 	function updateSlideScales(swiper) {
 		swiper.slides.forEach((slide, index) => {
