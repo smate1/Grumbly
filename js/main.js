@@ -14,20 +14,32 @@ document.addEventListener('DOMContentLoaded', function () {
 				slidesPerView: 1,
 				spaceBetween: 20,
 			},
-			480: {
-				slidesPerView: 1,
-				spaceBetween: 20,
+			576: {
+				slidesPerView: 1.1,
+				spaceBetween: 100,
 			},
 			768: {
 				slidesPerView: 1.2,
-				spaceBetween: 25,
+				spaceBetween: 100,
 			},
 			1024: {
 				slidesPerView: 1.5,
-				spaceBetween: 40,
+				spaceBetween: 100,
 			},
 			1400: {
 				slidesPerView: 1.8,
+				spaceBetween: 120,
+			},
+			1920: {
+				slidesPerView: 1.9,
+				spaceBetween: 200,
+			},
+			2560: {
+				slidesPerView: 2,
+				spaceBetween: 300,
+			},
+			3840: {
+				slidesPerView: 2.2,
 				spaceBetween: 350,
 			},
 		},
@@ -67,3 +79,30 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	}
 })
+function positionNavButtons() {
+	const activeSlide = document.querySelector('.swiper-slide-active')
+	if (!activeSlide) return
+
+	const container = document.querySelector('.reviews__slider-container')
+	const prevBtn = document.querySelector('.reviews__nav-prev')
+	const nextBtn = document.querySelector('.reviews__nav-next')
+
+	const slideRect = activeSlide.getBoundingClientRect()
+	const containerRect = container.getBoundingClientRect()
+
+	const offset = 40 // відстань у px від активного слайду
+
+	// позиціонуємо стрілки відносно активного слайду
+	prevBtn.style.left = `${
+		slideRect.left - containerRect.left - prevBtn.offsetWidth - offset
+	}px`
+	nextBtn.style.left = `${slideRect.right - containerRect.left + offset}px`
+}
+
+swiper.on('slideChangeTransitionEnd', () => {
+	positionNavButtons()
+})
+window.addEventListener('resize', () => {
+	positionNavButtons()
+})
+positionNavButtons()
